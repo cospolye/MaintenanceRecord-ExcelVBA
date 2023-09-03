@@ -8,7 +8,7 @@ Sub ColorCellsByMonth()
     Dim MonthColumn As Integer
     
     ' Set the source worksheet
-    Set SourceSheet = ThisWorkbook.Sheets("ÌÁÉÍÔResults")
+    Set SourceSheet = ThisWorkbook.Sheets("ÎœÎ‘Î™ÎÎ¤Results")
     
     ' Loop through the records in the source worksheet starting from row 2
     LastRow = SourceSheet.Cells(SourceSheet.Rows.Count, "A").End(xlUp).Row
@@ -23,11 +23,11 @@ Sub ColorCellsByMonth()
         If MonthColumn >= 9 And MonthColumn <= 20 Then ' Columns I to T
             ' Apply color based on the keyword in the "PERIGRERG" column (column E)
             CellValue = SourceSheet.Cells(i, 5).Value
-            If InStr(1, CellValue, "ÓÕÍÔÇÑÇÓÇ") > 0 Then
+            If InStr(1, CellValue, "Î£Î¥ÎÎ¤Î—Î¡Î—Î£Î—") > 0 Then
                 SourceSheet.Cells(i, MonthColumn).Interior.Color = RGB(255, 0, 0) ' Red for S??????S?
-            ElseIf InStr(1, CellValue, "ÅËÅÃ×ÏÓ") > 0 Then
+            ElseIf InStr(1, CellValue, "Î•Î›Î•Î“Î§ÎŸÎ£") > 0 Then
                 SourceSheet.Cells(i, MonthColumn).Interior.Color = RGB(0, 255, 0) ' Green for ???G??S
-            ElseIf InStr(1, CellValue, "ÄÉÁÊÑÉÂÙÓÇ") > 0 Then
+            ElseIf InStr(1, CellValue, "Î”Î™Î‘ÎšÎ¡Î™Î’Î©Î£Î—") > 0 Then
                 SourceSheet.Cells(i, MonthColumn).Interior.Color = RGB(255, 255, 0) ' Yellow for ???????OS?
             End If
         End If
