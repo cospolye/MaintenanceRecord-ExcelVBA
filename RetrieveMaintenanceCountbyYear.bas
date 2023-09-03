@@ -15,10 +15,10 @@ Sub GetMaintenanceCountByYear()
     
     ' Search for data in the worksheet
     Dim LastRow As Long
-    LastRow = Sheets("ÌÁÉÍÔResults").Cells(Rows.Count, 2).End(xlUp).Row
+    LastRow = Sheets("ÎœÎ‘Î™ÎÎ¤Results").Cells(Rows.Count, 2).End(xlUp).Row
     
     For i = 2 To LastRow
-        If Sheets("ÌÁÉÍÔResults").Cells(i, 2).Value = MachineSerialNumber And Year(Sheets("ÌÁÉÍÔResults").Cells(i, 4).Value) = SelectedYear Then
+        If Sheets("ÎœÎ‘Î™ÎÎ¤Results").Cells(i, 2).Value = MachineSerialNumber And Year(Sheets("ÎœÎ‘Î™ÎÎ¤Results").Cells(i, 4).Value) = SelectedYear Then
             MaintenanceCount = MaintenanceCount + 1
         End If
     Next i
