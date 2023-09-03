@@ -12,7 +12,7 @@ Sub DataMiningOptimized()
     ' Set the source worksheet and the result worksheet
     Set SourceSheet = ThisWorkbook.Sheets("KINMHXPAR")
     Set ResultSheet = ThisWorkbook.Sheets.Add
-    ResultSheet.Name = "?????Results"
+    ResultSheet.Name = "ΜΑΙΝΤResults"
     
     ' Initialize the result row
     ResultRow = 2
@@ -33,7 +33,7 @@ Sub DataMiningOptimized()
         CellValue = SourceSheet.Cells(i, 5).Value
         
         ' Check if the text contains the keywords
-        If InStr(1, CellValue, "S??????S?") > 0 Or InStr(1, CellValue, "???G??S") > 0 Or InStr(1, CellValue, "???????OS?") > 0 Then
+        If InStr(1, CellValue, "ΣΥΝΤΗΡΗΣΗ") > 0 Or InStr(1, CellValue, "ΕΛΕΓΧΟΣ") > 0 Or InStr(1, CellValue, " ΔΙΑΚΡΙΒΩΣΗ") > 0 Then
             ' If any of the keywords are found, copy the row to the result worksheet
             SourceSheet.Cells(i, 1).Resize(1, 5).Copy Destination:=ResultSheet.Cells(ResultRow, 1)
             ResultSheet.Cells(ResultRow, 7).Value = DVCE ' Add the DVCE field
